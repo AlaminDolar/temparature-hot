@@ -21,10 +21,12 @@ const displayTemperature = temperature =>{
    setInnertext('temperature',temperature.main.temp);
    setInnertext('condition',temperature.weather[0].main);
    console.log(temperature);
+
+   const url= `http://openweathermap.org/img/wn/${temperature.weather[0].icon}@2x.png`;
+   const Imgicon = document.getElementById('icon');
+   Imgicon.setAttribute('src',url);
 }
 
-// set icon 
 
-const urll = `http://openweathermap.org/img/wn/${temperature.weather[0].icon}@2x.png` ;
-const Imgicon = document.getElementById('weather-icon');
-Imgicon.setAttribute('src',urll);
+
+
